@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://bfnv0ve64vfu4"]
+
+[ext_resource type="Script" uid="uid://cba6tg6fwgtf7" path="res://scripts/ui.gd" id="1_gdt2y"]
+[ext_resource type="Texture2D" uid="uid://coq68nm86g4hk" path="res://assets/UI objects/bar_background.png" id="1_x4jx1"]
+[ext_resource type="Texture2D" uid="uid://duy6jxgse3t1y" path="res://assets/UI objects/bar_foreground.png" id="2_yev5y"]
+[ext_resource type="PackedScene" uid="uid://bii7w38i0p4r6" path="res://scenes/score_counter.tscn" id="4_wm3ai"]
+
+[node name="UI" type="MarginContainer"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 36.0
+grow_horizontal = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+script = ExtResource("1_gdt2y")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="ShieldBar" type="TextureProgressBar" parent="HBoxContainer"]
+custom_minimum_size = Vector2(80, 16)
+layout_mode = 2
+value = 100.0
+nine_patch_stretch = true
+stretch_margin_left = 3
+stretch_margin_top = 3
+stretch_margin_right = 3
+stretch_margin_bottom = 3
+texture_under = ExtResource("1_x4jx1")
+texture_progress = ExtResource("2_yev5y")
+
+[node name="ScoreCounter" parent="HBoxContainer" instance=ExtResource("4_wm3ai")]
+layout_mode = 2
