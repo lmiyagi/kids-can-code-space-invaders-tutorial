@@ -1,9 +1,5 @@
 # Godot 4+ specific ignores
 .godot/
-<<<<<<< HEAD
-/android/
-=======
->>>>>>> 06e44733524fbd07b6e8b36e97bd5a2604016a34
 .nomedia
 
 # Godot-specific ignores
